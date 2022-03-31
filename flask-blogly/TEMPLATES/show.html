@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{user.full_name}}{% endblock %} 
+
+
+<div class="row">
+
+   {% if user.image_url %} 
+   <div class="jsh-sm-2 jsh-6">
+     <img src="{{ user.image.url }}"
+          alt="{{ user.full.name}}"
+          class="img-fluid">
+
+   </div>
+   {% endif %} 
+
+   <div class="jsh-sm-10 jsh12">
+    <h1>{{ user.full_name }}</h1>
+
+    <form>
+        <button class="btn btn-primary btn-sm"
+                formaction="/user/{{ user.id }}/edit"
+                formaction="GET">Edit
+        </button>
+        <button class="btn btn-danger btn-sm"
+                formaction="/user/{{ user.id }}/delete"
+                formaction="POST">DELETE</button>
+    </form>
+ </div>
+</div>
+
+{% endblock %} 
+

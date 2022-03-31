@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block title %}Edit Post{% endblock %} 
+
+{% block content %} 
+
+<h1>Edit Posts</h1>
+
+<form method="POST" action="/posts/{{post.id}}/edit">
+  <div class="form-group row">
+    <label for="title" class="jsh-sm-2 jsh-form-label">Title</label>
+    <div class="jsh-sm-10">
+        <input class="form-control" id="title" name="title" value="{{post.title}}">
+    </div>
+  </div>
+</form>

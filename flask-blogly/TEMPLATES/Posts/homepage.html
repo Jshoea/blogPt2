@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+
+{% block title %}Blog{% endblock %} 
+
+{% block content %} 
+
+<h1>Blog's Recent Posts</h1>
+
+{% for post in posts %} 
+<h2 class="mt-4">
+    <a href="/posts/{{ post.id }}">{{ post.title}}</a>"
+</h2>
